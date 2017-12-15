@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+      <style>
+      body
+      {
+        background-color: skyblue;
+      }
+      </style>
+  </head>
+
+<body>
+        <h1><b>Your registration is a success!!!</b></h1>
+        <p>First name:<%=data.firstName %> </p>
+        <p>Last Name: <%=data.lastName %> </p>
+        <p> School:<%=data.school %> </p>
+        <h4> Events registered: </h4>
+        <ul>
+          <% if(typeof data.events === 'string'){ data.events = [data.events];}
+           for(var i=0; i< (data.events.length); i++){  %>
+            <li><%=data.events[i] %>  </li>
+          <% } %>
+        </ul>
+
+        <h3> Looking forward to your participation</h3>
+
+</body>
+
+</html>

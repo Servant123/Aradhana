@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+      <style>
+      body
+      {
+        background-color: skyblue;
+      }
+      </style>
+  </head>
+
+<body>
+        <h1>Welcome to Aradhana Registration Page</h1>
+        <h2>Class 1-4 </h2>
+        <form id="registration-form" method="POST" action="/forma">
+          <label for="firstName">First name </label>
+          <input type="text" name="firstName" maxlength="20" autocomplete="off" required />
+          <br>
+          <label for="lastName">Last name </label>
+          <input type="text" name="lastName" maxlength="20" autocomplete="off" required />
+          <br>
+          <label for="school">School </label>
+          <input type="text" name="school" maxlength="30" autocomplete="off" required />
+          <br>
+          <h5>Select the events you want to take part in </h5>
+          <label for="fancy-dress"> Fancy dress</label>
+          <input type="checkbox" id="fancy-dress" name="events" value="Fancy dress">
+          <br>
+          <label for="kalaabhiruchi">  Kalaabhiruchi (drawing sketching painting)</label>
+          <input type="checkbox" id="kalaabhiruchi" name="events" value="Kalaabhiruchi">
+          <br>
+          <label for="sandesha"> Sandesha (story telling)</label>
+          <input type="checkbox" id="sandesha" name="events" value="Sandesha">
+          <br>
+          <label for="poetry">  Kannada poetry recitation</label>
+          <input type="checkbox" id="poetry" name="events" value="Kannada poetry recitation">
+          <br>
+
+
+
+          <input type="submit" id="submit" value="submit">
+
+        </form>
+        <script>
+        $(document).ready(function(){
+          $('#submit').click(function(){
+            var checked= $('input[type=checkbox]:checked').length;
+            if(!checked)
+            {
+              alert("You must select atleast one event");
+              return false;
+            }
+
+          });
+        });
+
+
+
+
+        </script>
+
+
+
+</body>
+
+</html>
